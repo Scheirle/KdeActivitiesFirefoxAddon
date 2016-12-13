@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "KDE Activities",
-	"version": "1.0",
+	"version": "1.0.0",
 	"description": "Adds support for KDE Activities.",
 
 	"background":
