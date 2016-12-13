@@ -47,7 +47,7 @@ To prevent confusion in this case the Add-on opens a special tab in every window
 
 ## Develop / Test
 Start firefox and browse to `about:debugging`.
-Add this add on temporary by selecting a file from the `kdeactivities/addon/` subdirectory.
+Add this add on temporary by selecting a file from the `KdeActivitiesFirefoxAddon/addon/` subdirectory.
 
-Alternatively you can run `web-ext run` in `kdeactivities/addon/`.
+Alternatively you can run `web-ext run` in `KdeActivitiesFirefoxAddon/addon/`.
 
