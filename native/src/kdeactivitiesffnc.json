@@ -1,0 +1,7 @@
+{
+  "name": "kdeactivitiesffnc",
+  "description": "Native counter part to the KdeActivities firefox add-on.",
+  "path": "/usr/bin/kdeactivitiesffnc",
+  "type": "stdio",
+  "allowed_extensions": [ "KdeActivitiesFirefoxAddon@addon.scheirle.de" ]
+}

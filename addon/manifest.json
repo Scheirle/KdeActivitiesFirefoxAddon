@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	"name": "KDE Activities",
+	"version": "1.0",
+	"description": "Adds support for KDE Activities.",
+
+	"background":
+	{
+		"scripts": ["activities.js"]
+	},
+	"permissions": ["nativeMessaging", "tabs", "<all_urls>"],
+	"applications":
+	{
+		"gecko":
+		{
+			"id": "KdeActivitiesFirefoxAddon@addon.scheirle.de",
+			"strict_min_version": "50.0"
+		}
+	}
+}
