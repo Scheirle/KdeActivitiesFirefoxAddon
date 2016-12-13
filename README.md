@@ -12,6 +12,8 @@ The native component is required to know what window is on which Activity.
 If you open multiple Firefox windows simultaneously (e.g. on session restore) it is hard for the native component to distinguish them.
 To prevent confusion in this case the Add-on opens a special tab in every window (with a different id per window) and closes right away again.
 
+## Links
+* [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/kde-activities/)
 
 ## How to build
 
