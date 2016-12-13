@@ -69,6 +69,8 @@ private:
 	KActivities::Consumer activities;
 	QList<FFWindow_ptr>   windows;
 
+	/// @brief Forces the next window which gets added on the current activity
+	bool                  forceNextWindowOnCurrentActivity;
 	/// @brief Set to true if we are currently updating the windows
 	bool                  updatingWindows;
 	/// @brief Set to the window to update if we are only updating a single window.

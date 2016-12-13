@@ -36,6 +36,7 @@ FFWindowsManager::FFWindowsManager(QObject* parent)
 	: QObject(parent)
 	, con(this)
 	, updatingWindows(false)
+	, forceNextWindowOnCurrentActivity(false)
 {
 	KWindowSystem* kws = KWindowSystem::self();
 	connect(kws, SIGNAL(windowAdded(WId)),   this, SLOT(onKWSWindowAdded(WId)));
@@ -55,6 +56,11 @@ void FFWindowsManager::onKWSWindowAdded(WId id)
 	{
 		auto w = std::make_shared<FFWindow>(id, this);
 		windows.push_back(w);
+		if (forceNextWindowOnCurrentActivity)
+		{
+			forceNextWindowOnCurrentActivity = false;
+			KWindowSystem::setOnActivities(w->getKwsID(), {getCurrentActivity()});
+		}
 		if (firstTimeDelay)
 		{
 			// The first time we receive this signal is at startup
@@ -243,7 +249,7 @@ void FFWindowsManager::onFFTabAdded(FFWindow::FFId ffWindowID, int ffTabID)
 		QJsonObject obj;
 		obj.insert("tid", QJsonValue(ffTabID));
 		obj.insert("wid", QJsonValue(ffWindowID));
-
+		forceNextWindowOnCurrentActivity = true;
 		con.sendMessage("ffwindowsmanager", "movetabtonewwindow", obj);
 	}
 	else
