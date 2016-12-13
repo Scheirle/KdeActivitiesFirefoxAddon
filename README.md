@@ -15,7 +15,7 @@ To prevent confusion in this case the Add-on opens a special tab in every window
 
 ## How to build
 
-	git clone …
+	git clone "https://github.com/Scheirle/KdeActivitiesFirefoxAddon.git"
 	cd KdeActivitiesFirefoxAddon
 	mkdir build
 
