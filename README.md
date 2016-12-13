@@ -37,11 +37,11 @@ To prevent confusion in this case the Add-on opens a special tab in every window
 
 #### Dependencies
 
-	* [Qt 5](https://www.qt.io/)
-		* Qt5Core
-		* Qt5Gui
-	* [KF5WindowSystem](https://api.kde.org/frameworks/kwindowsystem/html/index.html)
-	* [KF5Activities] (https://api.kde.org/frameworks/kactivities/html/index.html)
+* [Qt 5](https://www.qt.io/)
+	* Qt5Core
+	* Qt5Gui
+* [KF5WindowSystem](https://api.kde.org/frameworks/kwindowsystem/html/index.html)
+* [KF5Activities](https://api.kde.org/frameworks/kactivities/html/index.html)
 
 ## Develop / Test
 Start firefox and browse to `about:debugging`.
